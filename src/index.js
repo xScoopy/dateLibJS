@@ -28,16 +28,63 @@ class dateObject {
     get date() {
         return this._date.getDate()
     }
+    get padDate() {
+        let stringDate = this._date.getDate().toString()
+        return Number(stringDate) > 9 ? stringDate : "0" + stringDate
+    }
     get hours() {
         return this._date.getHours()
+    }
+    get padHours() {
+        let stringDate = this._date.getHours().toString()
+        return Number(stringDate) > 9 ? stringDate : "0" + stringDate
     }
     get mins() {
         return this._date.getMinutes()
     }
+    get padMins() {
+        let stringDate = this._date.getMinutes().toString()
+        return Number(stringDate) > 9 ? stringDate : "0" + stringDate
+    }
     get secs() {
         return this._date.getSeconds()
+    }
+    get padSecs() {
+        let stringDate = this._date.getSeconds().toString()
+        return Number(stringDate) > 9 ? stringDate : "0" + stringDate
+    }
+    format = (mask) => {        
+        const formatObject = {
+            'Y': this.year,
+            'y': this.yr,
+            'M': this.month,
+            'm': this.mon,
+            'D': this.padDate,
+            'd': this.date,
+            'H': this.padHours,
+            'h': this.hours,
+            'I': this.padMins,
+            'i': this.mins,
+            'S': this.padSecs,
+            's': this.secs
+        }
+        if(!mask){
+            return `${this.year} ${this.month} ${this.padDate}`
+        }
+        let formattedArray = []
+        const splitMask = mask.split('')
+        for(let i = 0; i < splitMask.length; i++){
+            if (formatObject[splitMask[i]]){
+                const itemToAdd = formatObject[splitMask[i]]
+                formattedArray.push(itemToAdd)
+            } else {
+                const itemToAdd = splitMask[i]
+                formattedArray.push(itemToAdd)
+            }
+        }
+        return formattedArray.join('')
     }
 
 }
 const a = new dateObject()
-console.log(a.mins)
+console.log(a.format('Y/m/D'))
