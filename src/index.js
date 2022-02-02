@@ -84,7 +84,46 @@ class dateObject {
         }
         return formattedArray.join('')
     }
-
+    when = () => {
+        let past = false
+        let date = this._date
+        let now = new dateObject()
+        now = now._date
+        if (now > date) {
+            past = true
+        }
+        //compare year for a difference
+        if (now.getFullYear() != date.getFullYear() ){
+            const difference = Math.abs(now.getFullYear() - date.getFullYear())
+            return past ? difference + " years ago" : difference + " years from now"
+        }
+        if (now.getMonth() != date.getMonth()) {
+            const difference = Math.abs(now.getMonth() - date.getMonth())
+            return past ? difference + " months ago" : difference + " months from now"
+        }
+        if (now.getDate() != date.getDate()) {
+            const difference = Math.abs(now.getDate() - date.getDate())
+            return past ? difference + " days ago" : difference + " days from now"
+        }
+        if (now.getHours() != date.getHours()) {
+            const difference = Math.abs(now.getHours() - date.getHours())
+            return past ? difference + " hours ago" : difference + " hours from now"
+        }
+        if (now.getMinutes() != date.getMinutes()) {
+            const difference = Math.abs(now.getMinutes() - date.getMinutes())
+            return past ? difference + " minutes ago" : difference + " minutes from now"
+        }
+        if (now.getSeconds() != date.getSeconds()) {
+            const difference = Math.abs(now.getSeconds() - date.getSeconds())
+            return past ? difference + " seconds ago" : difference + " seconds from now"
+        }
+    }
 }
-const a = new dateObject()
-console.log(a.format('Y/m/D'))
+
+
+
+// ms / 1000 / 60 / 60 / 24 / 365.25
+
+
+const testDate = new dateObject(2022, 1, 2, 14, 28, 0)
+console.log(testDate.when())
