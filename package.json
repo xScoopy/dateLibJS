@@ -1,0 +1,26 @@
+{
+  "name": "datelibjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xScoopy/dateLibJS.git"
+  },
+  "keywords": [],
+  "author": "Jeremiah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xScoopy/dateLibJS/issues"
+  },
+  "homepage": "https://github.com/xScoopy/dateLibJS#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}
