@@ -11,7 +11,7 @@ class dateObject {
         return this._date.getFullYear()
     }
     get yr() {
-        return this._date.getFullYear() % 1000 % 100
+        return this._date.getFullYear() % 100
     }
     get month() {
         return longMonths[this._date.getMonth()]
@@ -89,10 +89,11 @@ class dateObject {
         let date = this._date
         let now = new dateObject()
         now = now._date
+        let returnArray = []
+        
         if (now > date) {
             past = true
         }
-        //compare year for a difference
         if (now.getFullYear() != date.getFullYear() ){
             const difference = Math.abs(now.getFullYear() - date.getFullYear())
             return past ? difference + " years ago" : difference + " years from now"
@@ -118,6 +119,7 @@ class dateObject {
             return past ? difference + " seconds ago" : difference + " seconds from now"
         }
     }
+    
 }
 
 
