@@ -1,5 +1,8 @@
 # dateLibJS
 ![npm](https://img.shields.io/npm/v/dateLibJS)
+![GitHub](https://img.shields.io/github/license/xScoopy/dateLibJS)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/xScoopy/dateLibJS)
+![GitHub issues](https://img.shields.io/github/issues/xScoopy/dateLibJS)
 
 # datelibjs
 
