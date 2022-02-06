@@ -8,6 +8,7 @@ const longMonths = [
   "July",
   "August",
   "September",
+  "October",
   "November",
   "December",
 ];
@@ -190,7 +191,9 @@ class dateObject {
   };
 }
 
-// ms / 1000 / 60 / 60 / 24 / 365.25
 
-const testDate = new dateObject(2022, 1, 21, 14, 28, 0);
-console.log(testDate.format());
+module.exports.dateObject = dateObject
+module.exports.longMonths = longMonths
+module.exports.shortMonths = shortMonths
+module.exports.longDays = longDays
+module.exports.shortDays = shortDays
