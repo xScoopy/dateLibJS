@@ -1,5 +1,5 @@
 # dateLibJS
-![npm](https://img.shields.io/npm/v/scoopy-str-helper)
+![npm](https://img.shields.io/npm/v/dateLibJS)
 
 # datelibjs
 
